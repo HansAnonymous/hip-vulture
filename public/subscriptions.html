@@ -1,36 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bank App</title>
-    <meta name="CriticalElementsBankingApp" content="Bank App">
-    <link rel="stylesheet" type="text/css" href="/styles/inline.css">
+    <meta name="CriticalElementsBankingApp" content="Bank App" />
+    <link rel="stylesheet" type="text/css" href="/styles/inline.css" />
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
-  
+
   <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="./index.html">Home</a>
+      <a href="./compete.html">Group Finances</a>
+      <a href="./subscriptions.html">Subscription Manager</a>
+      <a href="./settings.html">Settings</a>
+    </div>
     <header class="header">
       <h1>
-        Manage Subscriptions
+        <span style="cursor:pointer" onclick="openNav()">&#9776;</span>
+        Bañk - Powered by SkũllũÑch
       </h1>
-      <button id="butInstall" aria-label="Install" hidden></button>
-      <a href="./index.html" id="butRefresh" aria-label="Refresh">c</a>
-  </header>
-    <br/><br/><br/><br/>
-<div class="card mb-3">
-  <img src="https://cdn.glitch.com/5766dde1-29ba-4363-b002-595ba3785f1a%2FSpotify%20Logo.png?v=1570244199116" class="card-img-top" alt="...">
-  <div class="card-body" style="position: relative; transform: transposeY(-6px);  background-color:rgb(225,225,225,0.7);">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-  </div>
-</div>
-    
-    <!--Stuff goes here-->
-    
-    
-</body>
+    </header>
+    <div class="main">
+      <div class="row" style="margin: 1em 0em 1em 0em;">
+        <div class="card" style="border-radius: 20px; background-color:#000000; margin: 0.5em 1em 2em 0.6em">
+          <img src="https://cdn.glitch.com/5766dde1-29ba-4363-b002-595ba3785f1a%2FSpotify%20Logo.png?v=1570244199116" style="height: 11em; width: 11em; border-radius: 20px;" class="card-img-top" alt="Spotify"/>
+          <div class="card-body column" style="position: absolute; bottom: 0px; height: 11em; width: 11em; background-color:rgb(255,255,255,.8); border-radius: 0px 0px 20px 20px;">
+            <b class="card-title" style="margin-bottom: 1px; font-size: 26px;"> Spotify </b>
+            <p class="card-text" style="margin-bottom: 0px;"><b>Fee:</b></p>
+            <p class="card-text" style="margin-bottom: 2px;">$5.38</p>
+            <p class="card-text" style="margin-bottom: 0px;">
+              <b>Next Payment:</b>
+            </p>
+            <p class="card-text" style="margin-bottom: 6px;">10/10/19</p>
+            <form target="_blank" action="https://accounts.spotify.com/en/login/?_locale=en-US&continue=https:%2F%2Fwww.spotify.com%2Fus%2Faccount%2Foverview%2F">
+              <input class="btn" type="submit" value="View Account" style="margin-bottom: 15px; background-color: #008154; color: white; font-size: 10px;"/>
+            </form>
+          </div>
+        </div>
+        <div class="card" style="border-radius: 20px; background-color:#000000; margin: 0.5em 1em 2em 0.6em">
+          <img src="https://cdn.glitch.com/5766dde1-29ba-4363-b002-595ba3785f1a%2FNetflix%20Logo.jpg?v=1570274334207" style="height: 11em; width: 11em; border-radius: 20px;" class="card-img-top" alt="Netflix"/>
+          <div class="card-body column" style="position: absolute; bottom: 0px; height: 11em; width: 11em; background-color:rgb(255,255,255,.8); border-radius: 0px 0px 20px 20px;">
+            <b class="card-title" style="margin-bottom: 1px; font-size: 26px;"> Netflix </b>
+            <p class="card-text" style="margin-bottom: 0px;"><b>Fee:</b></p>
+            <p class="card-text" style="margin-bottom: 2px;">$16.74</p>
+            <p class="card-text" style="margin-bottom: 0px;">
+              <b>Next Payment:</b>
+            </p>
+            <p class="card-text" style="margin-bottom: 6px;">10/22/19</p>
+            <form target="_blank" action="https://www3.netflix.com/Login?nextpage=https%3A%2F%2Fwww3.netflix.com%2Ftitle%2F80019503%3Flocale%3Des-US">
+              <input class="btn" type="submit" value="View Account" style="margin-bottom: 15px; background-color: #008154; color: white; font-size: 10px;"/>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin: 1em 0em 1em 0em;">
+        <div class="card" style="border-radius: 20px; background-color:#000000; margin: 0.5em 1em 2em 0.6em">
+          <img src="https://cdn.glitch.com/5766dde1-29ba-4363-b002-595ba3785f1a%2FAPS%20Logo.jpg?v=1570279918019" style="height: 11em; width: 11em; border-radius: 20px;" class="card-img-top" alt="APS"/>
+          <div class="card-body column" style="position: absolute; bottom: 0px; height: 11em; width: 11em; background-color:rgb(255,255,255,.8); border-radius: 0px 0px 20px 20px;">
+            <b class="card-title" style="margin-bottom: 1px; font-size: 26px;">
+              Electric Bill
+            </b>
+            <p class="card-text" style="margin-bottom: 0px;"><b>Fee:</b></p>
+            <p class="card-text" style="margin-bottom: 2px;">$38.29</p>
+            <p class="card-text" style="margin-bottom: 0px;"> <b>Next Payment:</b> </p>
+            <p class="card-text" style="margin-bottom: 6px;">11/3/19</p>
+            <form target="_blank" action="https://www.aps.com/en/myaccount">
+              <input class="btn" type="submit" value="View Account" style="margin-bottom: 15px; background-color: #008154; color: white; font-size: 10px;"/>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/scripts/jquery-3.0.0.min.js"></script>
+    <script src="/scripts/luxon-1.11.4.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/bootstrap.min.js"></script>
+  </body>
 </html>
