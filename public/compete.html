@@ -1,51 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bank App</title>
-    <meta name="CriticalElementsBankingApp" content="Bank App">
-    <link rel="stylesheet" type="text/css" href="/styles/inline.css">
+    <meta name="CriticalElementsBankingApp" content="Bank App" />
+    <link rel="stylesheet" type="text/css" href="/styles/inline.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
     <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css"
+      rel="stylesheet"
+    />
   </head>
-  
+
   <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="./index.html">Home</a>
+      <a href="./compete.html">Group Finances</a>
+      <a href="./subscriptions.html">Subscription Manager</a>
+      <a href="./settings.html">Settings</a>
+    </div>
     <header class="header">
       <h1>
-        Bañk App - Powered by SkũllũÑch
+        <span style="cursor:pointer" onclick="openNav()">&#9776;</span>
+        Bañk - Powered by SkũllũÑch
       </h1>
-      <button id="butInstall" aria-label="Install" hidden></button>
-      <a href="./index.html" id="butRefresh" aria-label="Refresh">c</a>
     </header>
-    
-    <div>
-      <canvas id="myChart" style="max-width: 500px;"></canvas>
-    </div>
-    
+    <main class="main">
+      <h1 style="color:white; margin-top:1em; margin-left:1em;e">
+        Disneyland Trip
+      </h1>
+      <div class="row" style="margin: 1em;">
+        <div class="main-card" style="min-width:400px">
+          <canvas id="myChart" style="background-color: #444"></canvas>
+        </div>
+      </div>
+      <div class="row" style="margin: 1em;">
+        <div class="main-card">
+          <h1>
+            Me $136/$200
+          </h1>
+          <div class="progress" style="margin:1em">
+            <div
+              class="progress-bar bg-warning"
+              role="progressbar"
+              style="width: 88%"
+              aria-valuenow="88"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <h1>
+            Nell $42/$200
+          </h1>
+          <div class="progress" style="margin:1em">
+            <div
+              class="progress-bar bg-success"
+              role="progressbar"
+              style="width: 21%"
+              aria-valuenow="21"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <h1>
+            Macks $78/$200
+          </h1>
+          <div class="progress" style="margin:1em">
+            <div
+              class="progress-bar bg-danger"
+              role="progressbar"
+              style="width: 39%"
+              aria-valuenow="39"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row"></div>
+    </main>
+
     <script src="/scripts/jquery-3.0.0.min.js"></script>
     <script src="/scripts/luxon-1.11.4.js"></script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/bootstrap.min.js"></script>
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
-    
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"
+    ></script>
+
     <script src="/scripts/piggyBank.js"></script>
-    
-    
+    <script>
+      addMoneyToPiggyBank(136);
+    </script>
   </body>
-  
 </html>

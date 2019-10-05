@@ -26,213 +26,68 @@
   <meta name="CriticalElementsBankingApp" content="Bank App">
   <link rel="stylesheet" type="text/css" href="/styles/inline.css">
   <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/styles/style.css">
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="./index.html">Home</a>
+    <a href="./compete.html">Group Finances</a>
+    <a href="./subscriptions.html">Subscription Manager</a>
+    <a href="./settings.html">Settings</a>
+  </div>
   <header class="header">
     <h1>
-      Bañk App - Powered by SkũllũÑch
+      <span style="cursor:pointer" onclick="openNav()">&#9776;</span>
+      Bañk - Powered by SkũllũÑch
     </h1>
-    <button id="butInstall" aria-label="Install" hidden></button>
-    <a href="./compete.html" id="butRefresh" aria-label="Refresh">c</a>
   </header>
   
-  
   <main class="main">
-
-    <a href="./subscriptions.html" id="butAdd" class="fab" aria-label="Add">
-      <span class="icon add"></span>
-    </a>
-    
-    <div class="accordion" id="accordionExample">
-      <div class="card">
-        <div class="card-header" id="headingOne">
-          <h2 class="mb-0">
-            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Collapsible Group Item #1
-            </button>
-          </h2>
-        </div>
-
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-          <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          </div>
-        </div>
-      </div>
+    <div id="account" class="main-card">
+      <b>Welcome, John Smith</b><br>
+    </div>  
+    <div id="checking_balance" class="main-card">
+      <b>Your checking account balance:</b>&nbsp$4,330<br>
+      <button class="btn col-md-6 ml1 mr1 mt1" style="max-width: 94%; margin-bottom: 10px; background-color: #008154; color: white;">Pay</button>
+      <button class="btn col-md-4 ml1 mr1" style="max-width: 94%; margin-bottom: 10px; background-color: #008154; color: white;">Transfer</button>
+      <button class="btn col-md-4 ml1 mr1" style="max-width: 94%; margin-bottom: 10px; background-color: #008154; color: white;">More Options</button></div>
+    <div id="credit_balance" class="main-card">
+      <b>Your current credit balance:</b>&nbsp$249.11<br>
+      <div class="row mt1"><button class="btn col-md-6 ml2 mr1" style="max-width: 58%; margin-bottom: 10px; background-color: #008154; color: white;">Pay Card</button>
+        <button class="btn col-md-4 ml1 mr1" style="max-width: 22%; margin-bottom: 10px; background-color: #008154; color: white;">...</button></div>
     </div>
-    
-    <div id="about4" class="weather-card">
-      <b>Your money:</b><br>
-      $69,420<br>
-      Hello
-      <br>Filler
-      <br>More Filler
-    </div>
-    
-    <div id="about3" class="weather-card">
-      <b>Your money:</b><br>
-      $69,420<br>
-      Hello
-      <br>Filler
-      <br>More Filler
-    </div>
-  
-    <div id="data-request" class="weather-card">
-      <b>Request your data</b><br>
-      $69,420<br>
-      Hello
-      <br>Filler
-      <br>More Filler
-    </div>      
-    
-    <div id="weather-template" class="weather-card" hidden>
-      <div class="card-spinner">
-        <svg viewBox="0 0 32 32" width="32" height="32">
-          <circle cx="16" cy="16" r="14" fill="none"></circle>
-        </svg>
-      </div>
-      <button class="remove-city">&times;</button>
-      <div class="city-key" hidden></div>
-      <div class="card-last-updated" hidden></div>
-      <div class="location">&nbsp;</div>
-      <div class="date">&nbsp;</div>
-      <div class="description">&nbsp;</div>
-      <div class="current">
-        <div class="visual">
-          <div class="icon"></div>
-          <div class="temperature">
-            <span class="value"></span><span class="scale">°F</span>
-          </div>
-        </div>
-        <div class="description">
-          <div class="humidity">
-            <span class="label">Humidity:</span>
-            <span class="value"></span><span class="scale">%</span>
-          </div>
-          <div class="wind">
-            <span class="label">Wind:</span>
-            <span class="value"></span>
-            <span class="scale">mph</span>
-            <span class="direction"></span>°
-          </div>
-          <div class="sunrise">
-            <span class="label">Sunrise:</span>
-            <span class="value"></span>
-          </div>
-          <div class="sunset">
-              <span class="label">Sunset:</span>
-              <span class="value"></span>
-            </div>
-        </div>
-      </div>
-      <div class="future">
-        <div class="oneday">
-          <div class="date"></div>
-          <div class="icon"></div>
-          <div class="temp-high">
-            <span class="value"></span>°
-          </div>
-          <div class="temp-low">
-            <span class="value"></span>°
-          </div>
-        </div>
-        <div class="oneday">
-          <div class="date"></div>
-          <div class="icon"></div>
-          <div class="temp-high">
-            <span class="value"></span>°
-          </div>
-          <div class="temp-low">
-            <span class="value"></span>°
-          </div>
-        </div>
-        <div class="oneday">
-          <div class="date"></div>
-          <div class="icon"></div>
-          <div class="temp-high">
-            <span class="value"></span>°
-          </div>
-          <div class="temp-low">
-            <span class="value"></span>°
-          </div>
-        </div>
-        <div class="oneday">
-          <div class="date"></div>
-          <div class="icon"></div>
-          <div class="temp-high">
-            <span class="value"></span>°
-          </div>
-          <div class="temp-low">
-            <span class="value"></span>°
-          </div>
-        </div>
-        <div class="oneday">
-          <div class="date"></div>
-          <div class="icon"></div>
-          <div class="temp-high">
-            <span class="value"></span>°
-          </div>
-          <div class="temp-low">
-            <span class="value"></span>°
-          </div>
-        </div>
-        <div class="oneday">
-          <div class="date"></div>
-          <div class="icon"></div>
-          <div class="temp-high">
-            <span class="value"></span>°
-          </div>
-          <div class="temp-low">
-            <span class="value"></span>°
-          </div>
-        </div>
-        <div class="oneday">
-          <div class="date"></div>
-          <div class="icon"></div>
-          <div class="temp-high">
-            <span class="value"></span>°
-          </div>
-          <div class="temp-low">
-            <span class="value"></span>°
-          </div>
-        </div>
-      </div>
+    <div id="credit-score" class="main-card">
+      <b>Your Credit Score</b><br>
+      <div class="row mt1"><button class="btn col-md-6 ml2 mr1" style="padding: 20px 5px 20px 5px; max-width: 18%; margin-bottom: 10px; background-color: #008154; color: white;">820</button>
+        <button class="btn col-md-4 ml1 mr1" style="max-width: 60%; margin-bottom: 10px; background-color: #008154; color: white;">What does this mean?</button></div>
+      <button class="btn col-md-6 ml1 mr1 mt1" style="max-width: 92%; margin-bottom: 10px; background-color: #008154; color: white;">Talk to a real consultant</button>
     </div>
   </main>
-
-  <div id="addDialogContainer">
-    <div class="dialog">
-      <div class="dialog-title">Add new city</div>
-      <div class="dialog-body">
-        <select id="selectCityToAdd" aria-label="City to add">
-          <!--
-            Values are lat/lon values, use Google Maps to find and add
-            additional cities.
-          -->
-          <option value="28.6472799,76.8130727">Dehli, India</option>
-          <option value="-5.7759362,106.1174957">Jakarta, Indonesia</option>
-          <option value="51.5287718,-0.2416815">London, UK</option>
-          <option value="40.6976701,-74.2598666">New York, USA</option>
-          <option value="48.8589507,2.2770202">Paris, France</option>
-          <option value="-64.8251018,-63.496847">Port Lockroy, Antarctica</option>
-          <option value="37.757815,-122.5076401">San Francisco, USA</option>
-          <option value="31.2243085,120.9162955">Shanghai, China</option>
-          <option value="35.6735408,139.5703032">Tokyo, Japan</option>
-        </select>
-      </div>
-      <div class="dialog-buttons">
-        <button id="butDialogCancel" class="button">Cancel</button>
-        <button id="butDialogAdd" class="button">Add</button>
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modelLabel;" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">Login</h5>
+        </div>
+        <div class="modal-body">
+          <form>
+            Customer ID:<br>
+            <input type="text" name="customerid" value="xxxxxxxxxxxxxx">
+            <br>
+            First Name:<br>
+            <input type="text" name="firstname" value="Your Name">
+            <br><br>
+            <input type="submit" value="Login" onclick="login()">
+          </form> 
+        </div>
       </div>
     </div>
   </div>
-  
   <script src="/scripts/jquery-3.0.0.min.js"></script>
   <script src="/scripts/luxon-1.11.4.js"></script>
   <script src="/scripts/app.js"></script>
   <script src="/scripts/bootstrap.min.js"></script>
-
 </body>
 </html>

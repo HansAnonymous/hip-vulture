@@ -7,18 +7,30 @@
     <title>Bank App</title>
     <meta name="CriticalElementsBankingApp" content="Bank App">
     <link rel="stylesheet" type="text/css" href="/styles/inline.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   
   <body>
-    <header class="header">
-      <h1>
-        Bañk App - Powered by SkũllũÑch
-      </h1>
-      <button id="butInstall" aria-label="Install" hidden></button>
-      <a href="./index.html" id="butRefresh" aria-label="Refresh">c</a>
+    <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="./index.html">Home</a>
+    <a href="./compete.html">Group Finances</a>
+    <a href="./subscriptions.html">Subscription Manager</a>
+    <a href="./settings.html">Settings</a>
+  </div>
+  <header class="header">
+    <h1>
+      <span style="cursor:pointer" onclick="openNav()">&#9776;</span>
+      Bañk App - Powered by SkũllũÑch
+    </h1>
   </header>
+  
+  <main class="main">
+    <!--Your code goes here-->
+  </main>
     
   <script src="/scripts/jquery-3.0.0.min.js"></script>
   <script src="/scripts/luxon-1.11.4.js"></script>

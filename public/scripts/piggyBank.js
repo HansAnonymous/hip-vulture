@@ -1,5 +1,8 @@
+let money = 0;
+
 function addMoneyToPiggyBank(x){
   var ctx = document.getElementById("myChart").getContext('2d');
+  money = money + x;
   var myChart = new Chart(ctx, {
   type: 'line',
   data: {
@@ -7,7 +10,7 @@ function addMoneyToPiggyBank(x){
   datasets: [
         {
           label: "Macks",
-          data: [0, 65, 45, 65, 35, 65, 78],
+          data: [0, 65, 45, 65, 35, 78],
           backgroundColor: "rgba(173, 27, 100, 0.1)",
           borderColor: [
             "rgba(173, 27, 100, 1)",
@@ -18,7 +21,7 @@ function addMoneyToPiggyBank(x){
         },
         {
           label: "Nell",
-          data: [0, 23, 47, 89, 73, 62, 42],
+          data: [0, 23, 47, 89, 73, 42],
           backgroundColor: 'rgba(73, 127, 100, 0.1)',
           borderColor: [
             'rgba(73, 127, 100, 1)',
@@ -29,7 +32,7 @@ function addMoneyToPiggyBank(x){
         },
         {
           label: "Me",
-          data: [0, 0, 0, 0, 0, 0, 0+x],
+          data: [0, 0, 0, 0, 0, money],
           backgroundColor: 'rgba(173, 127, 10, 0.1)',
           borderColor: [
             'rgba(173, 127, 10, 1)',
@@ -41,13 +44,13 @@ function addMoneyToPiggyBank(x){
       ],
   },
   options: {
-  scales: {
-  yAxes: [{
-  ticks: {
-  beginAtZero: true
-  }
-  }]
-  }
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
   }
   });
 }
